@@ -14,15 +14,31 @@ export namespace Components {
 
   interface MyComponent {
     /**
-    * The content
+    * The first name
     */
-    'content': string;
+    'first': string;
+    /**
+    * The last name
+    */
+    'last': string;
+    /**
+    * The middle name
+    */
+    'middle': string;
   }
   interface MyComponentAttributes extends StencilHTMLAttributes {
     /**
-    * The content
+    * The first name
     */
-    'content'?: string;
+    'first'?: string;
+    /**
+    * The last name
+    */
+    'last'?: string;
+    /**
+    * The middle name
+    */
+    'middle'?: string;
   }
 }
 

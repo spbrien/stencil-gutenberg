@@ -7,11 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     |
-| -------- | --------- | --------------- | -------- |
-| `first`  | `first`   | The first name  | `string` |
-| `last`   | `last`    | The last name   | `string` |
-| `middle` | `middle`  | The middle name | `string` |
+| Property  | Attribute | Description | Type     |
+| --------- | --------- | ----------- | -------- |
+| `content` | `content` | The content | `string` |
 
 
 ----------------------------------------------

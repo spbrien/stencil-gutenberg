@@ -13,12 +13,12 @@ registerBlockType( 'gutenberg-examples/example-01-basic-esnext', {
 	category: 'layout',
 	edit() {
 		return <div style={ blockStyle }>
-      <my-component first="From" last="Stencil"></my-component>
+      <my-component content="Some static content"></my-component>
     </div>;
 	},
 	save() {
 		return <div style={ blockStyle }>
-      <my-component first="From"></my-component>
+      <my-component content="Some static content"></my-component>
     </div>;
 	},
 } );

@@ -29,6 +29,6 @@ registerBlockType( 'gutenberg-examples/example-03-editable-esnext', {
 		);
 	},
 	save: ( props ) => {
-		return <my-component first={ `${props.attributes.content}` }></my-component>
+		return <my-component content={ `${props.attributes.content}` }></my-component>
 	},
 } );

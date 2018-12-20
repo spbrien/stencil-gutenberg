@@ -7,21 +7,13 @@ import { Component, Prop } from '@stencil/core';
 })
 export class MyComponent {
   /**
-   * The first name
+   * The content
    */
-  @Prop() first: string;
-
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
+  @Prop() content: string;
 
   render() {
-    return <div>Hello, World! I'm {this.first}</div>;
+    return <div class="my-component">
+      {this.content}
+    </div>;
   }
 }
