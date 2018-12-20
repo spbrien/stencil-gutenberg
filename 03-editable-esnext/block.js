@@ -32,12 +32,12 @@ registerBlockType( 'gutenberg-examples/example-03-editable-esnext', {
         }
         {
           !isSelected &&
-          <my-component content={ `${content}` }></my-component>
+          <my-component content={content}></my-component>
         }
       </div>
 		);
 	},
 	save: ( props ) => {
-		return <my-component content={ `${props.attributes.content}` }></my-component>
+		return <my-component content={props.attributes.content}></my-component>
 	},
 } );
