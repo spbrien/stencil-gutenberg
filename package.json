@@ -1,0 +1,30 @@
+{
+	"name": "gutenberg-examples",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Gutenberg Examples",
+	"repository": "git+https://github.com/WordPress/gutenberg-examples.git",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"editor",
+		"Examples"
+	],
+	"scripts": {
+		"lint-js": "eslint .",
+		"lint-js:fix": "eslint . --fix",
+		"build": "npm run build:01-basic && npm run build:03-editable && npm run build:04-controls && npm run build:05-recipe",
+		"build:01-basic": "cd 01-basic-esnext && npm run build",
+		"build:03-editable": "cd 03-editable-esnext && npm run build",
+		"build:04-controls": "cd 04-controls-esnext && npm run build",
+		"build:05-recipe": "cd 05-recipe-card-esnext && npm run build"
+	},
+	"devDependencies": {
+		"eslint": "^5.2.0",
+		"eslint-config-wordpress": "^2.0.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-react": "^7.10.0",
+		"eslint-plugin-wordpress": "git://github.com/WordPress-Coding-Standards/eslint-plugin-wordpress.git#1774343f6226052a46b081e01db3fca8793cc9f1"
+	}
+}
