@@ -10,22 +10,31 @@ registerBlockType( 'gutenberg-examples/example-03-editable-esnext', {
 		content: {
 			selector: 'my-component',
       source: 'attribute',
-      attribute: 'first'
+      attribute: 'content'
 		},
 	},
 	edit: ( props ) => {
-		const { attributes: { content }, setAttributes, className } = props;
+		const { attributes: { content }, setAttributes, className, isSelected } = props;
 		const onChangeContent = ( newContent ) => {
+      console.log(newContent)
 			setAttributes( { content: newContent } );
 		};
 		return (
-      <RichText
-        format="string"             // Default is 'element'. Wouldn't work for a tag attribute
-        className={props.className} // Automatic class: gutenberg-blocks-sample-block-editable
-        onChange={onChangeContent} // onChange event callback
-        value={content} // Binding
-        placeholder="Some Content"
-      />
+      <div>
+        { isSelected &&
+          <RichText
+            format="string"             // Default is 'element'. Wouldn't work for a tag attribute
+            className={props.className} // Automatic class: gutenberg-blocks-sample-block-editable
+            onChange={onChangeContent} // onChange event callback
+            value={content} // Binding
+            placeholder="Some Content"
+          />
+        }
+        {
+          !isSelected &&
+          <my-component content={ `${content}` }></my-component>
+        }
+      </div>
 		);
 	},
 	save: ( props ) => {
